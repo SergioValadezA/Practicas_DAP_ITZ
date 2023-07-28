@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import { Button, Linking, StyleSheet, View } from "react-native";
 
 const AbrirAjustesBoton = ({ hijo }) => {
@@ -6,7 +6,7 @@ const AbrirAjustesBoton = ({ hijo }) => {
     const handPrees = useCallback(async () => {
      await Linking.openSettings();   
     }, []);
-    return <Button title={hijo} onPress={handPrees}/>
+    return <Button title="Abrir ajustes" onPress={handPrees}/>
 } ;
 
 const App = ()=>{
